@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	@Override
 	public void onClick ( View v )
 	{
+		
 		if( v.getId () == R.id.btn_camera )
 		{
 			if ( !(
