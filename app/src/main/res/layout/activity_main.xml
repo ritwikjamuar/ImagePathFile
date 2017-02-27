@@ -7,25 +7,42 @@
 	android:layout_height = "match_parent"
 	tools:context = "ritwik.imagepath.MainActivity">
 
-	<Button
+	<LinearLayout
 		android:layout_width = "match_parent"
 		android:layout_height = "wrap_content"
-		android:layout_marginStart="60dp"
-		android:layout_marginLeft="60dp"
-		android:layout_marginRight="60dp"
-		android:layout_marginEnd="60dp"
-		android:layout_marginTop="20dp"
-		android:background="@color/colorPrimary"
-		android:text="Camera"
-		android:textColor="#ffffff"
-		android:textAllCaps="false"
-		android:id="@+id/btn_camera"/>
+		android:weightSum="2"
+		android:id="@+id/layout_buttons">
+
+		<Button
+			android:layout_width = "match_parent"
+			android:layout_height = "wrap_content"
+			android:background="@color/colorPrimary"
+			android:text="@string/btn_camera"
+			android:textColor="#ffffff"
+			android:textAllCaps="false"
+			android:layout_weight="1"
+			style="?android:attr/buttonBarButtonStyle"
+			android:id="@+id/btn_camera"/>
+
+		<Button
+			android:layout_width = "match_parent"
+			android:layout_height = "wrap_content"
+			android:background="@color/colorPrimary"
+			android:text="@string/btn_gallery"
+		    android:textColor="#ffffff"
+		    android:textAllCaps="false"
+		    android:layout_weight="1"
+			style="?android:attr/buttonBarButtonStyle"
+			android:id="@+id/btn_gallery"/>
+
+	</LinearLayout>
 
 	<ImageView
 		android:layout_width = "match_parent"
 		android:layout_height = "match_parent"
-		android:layout_below="@+id/btn_camera"
-		android:layout_marginTop="20dp"
-		android:id="@+id/img_view"/>
+		android:layout_below="@+id/layout_buttons"
+		android:scaleType="centerCrop"
+		android:id="@+id/img_view"
+		android:contentDescription = "@string/img_desc"/>
 
 </RelativeLayout>
